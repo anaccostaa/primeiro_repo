@@ -1,11 +1,210 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banho e Tosa - Patinhas Petshop</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservar · Patinhas Petshop</title>
+  <meta name="description" content="Agende banho, tosa ou outros serviços para o seu pet na Patinhas Petshop."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_patinhaspetshop.png" alt="Patinhas Petshop" height="50"/>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Início</a>
+        <a href="banho_tosa.html" class="btn-reserva active">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO DA PÁGINA -->
+    <section class="pagina-hero">
+      <div class="container">
+        <p class="hero-kicker">Agendamento online</p>
+        <h1>Reserve para o <em>seu pet</em></h1>
+        <p class="hero-sub">Preencha o formulário e entraremos em contato em até 24h para confirmar o horário.</p>
+      </div>
+    </section>
+
+    <!-- TABELA DE PREÇOS -->
+    <section class="precos">
+      <div class="container">
+        <h2>Tabela de preços</h2>
+        <p class="section-sub">Valores a partir de — podem variar conforme porte e raça</p>
+        <div class="precos-grid">
+
+          <div class="preco-card">
+            <div class="servico-icone">🛁</div>
+            <h3>Banho</h3>
+            <ul>
+              <li>Pequeno porte <span>R$ 40</span></li>
+              <li>Médio porte <span>R$ 60</span></li>
+              <li>Grande porte <span>R$ 90</span></li>
+            </ul>
+          </div>
+
+          <div class="preco-card destaque">
+            <div class="preco-badge">Mais popular</div>
+            <div class="servico-icone">✂️</div>
+            <h3>Banho + Tosa</h3>
+            <ul>
+              <li>Pequeno porte <span>R$ 70</span></li>
+              <li>Médio porte <span>R$ 100</span></li>
+              <li>Grande porte <span>R$ 140</span></li>
+            </ul>
+          </div>
+
+          <div class="preco-card">
+            <div class="servico-icone">🏨</div>
+            <h3>Hotel</h3>
+            <ul>
+              <li>Pequeno porte <span>R$ 80/dia</span></li>
+              <li>Médio porte <span>R$ 100/dia</span></li>
+              <li>Grande porte <span>R$ 130/dia</span></li>
+            </ul>
+          </div>
+
+          <div class="preco-card">
+            <div class="servico-icone">💊</div>
+            <h3>Veterinário</h3>
+            <ul>
+              <li>Consulta geral <span>R$ 120</span></li>
+              <li>Vacinas <span>R$ 80</span></li>
+              <li>Retorno <span>R$ 60</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="formulario-section">
+      <div class="container">
+        <h2>Faça sua reserva</h2>
+        <p class="section-sub">Preencha os dados abaixo</p>
+
+        <form class="reserva-form" id="reservaForm" novalidate>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="tutor">Seu nome *</label>
+              <input type="text" id="tutor" name="tutor" placeholder="Ex: Ana Paula" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone *</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(32) 99999-9999" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="pet">Nome do pet *</label>
+              <input type="text" id="pet" name="pet" placeholder="Ex: Bolinha" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="raca">Raça</label>
+              <input type="text" id="raca" name="raca" placeholder="Ex: Shih Tzu"/>
+            </div>
+
+            <div class="form-group">
+              <label for="servico">Serviço desejado *</label>
+              <select id="servico" name="servico" required>
+                <option value="">Selecione um serviço</option>
+                <option value="banho">Banho</option>
+                <option value="banho-tosa">Banho + Tosa</option>
+                <option value="hotel">Hotel</option>
+                <option value="veterinario">Veterinário</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="data">Data preferida *</label>
+              <input type="date" id="data" name="data" required/>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="obs">Observações</label>
+            <textarea id="obs" name="obs" rows="3" placeholder="Alguma informação importante sobre seu pet?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Agendar agora</button>
+
+        </form>
+
+        <!-- MENSAGEM DE CONFIRMAÇÃO (aparece após envio) -->
+        <div class="confirmacao" id="confirmacao" aria-live="polite">
+          <div class="confirmacao-icone">🐾</div>
+          <h3>Solicitação recebida!</h3>
+          <p>Entraremos em contato em até 24h para confirmar a disponibilidade do horário.</p>
+          <a href="index.html" class="btn-outline" style="margin-top:1.5rem; display:inline-block;">Voltar ao início</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo">Patinhas Petshop</p>
+        <p>Serviços de petshop em São João del Rei, MG</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="banho_tosa.html">Reservar</a>
+      </div>
+      <div>
+        <h4>Endereço</h4>
+        <p>Av. do Limoeiro, 700<br/>Bairro Limoeiro · São João del Rei, MG</p>
+      </div>
+      <div>
+        <h4>Reservas</h4>
+        <p>(32) 99999-9999</p>
+        <p>Seg–Sex: 08h–18h</p>
+        <p>Sáb: 08h–13h</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Patinhas Petshop. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT — confirmação do formulário -->
+  <script>
+    // Pega o formulário e a mensagem de confirmação
+    const form = document.getElementById('reservaForm');
+    const confirmacao = document.getElementById('confirmacao');
+
+    // Quando o usuário clicar em "Agendar agora"
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // impede o recarregamento da página
+
+      // Verifica se os campos obrigatórios estão preenchidos
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Esconde o formulário e mostra a confirmação
+      form.style.display = 'none';
+      confirmacao.style.display = 'block';
+
+      // Rola a página até a confirmação
+      confirmacao.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
 </body>
 </html>
