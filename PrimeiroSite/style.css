@@ -8,7 +8,9 @@
   --branco: #FFFFFF;
   --sombra: 0 4px 24px rgba(92, 61, 46, 0.10);
   --raio: 16px;
-  *, *::before, *::after {
+}
+
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,7 +41,7 @@ a {
   margin: 0 auto;
   padding: 0 2rem;
 }
-site-header {
+.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
