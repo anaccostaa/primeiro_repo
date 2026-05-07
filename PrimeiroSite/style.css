@@ -132,11 +132,11 @@ a {
 .hero::before {
   content: '';
   position: absolute;
-  top: -50px;   /* era -150px */
-  right: -150px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(232,119,58,0.18) 0%, transparent 70%);
+  top: 0;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(232,119,58,0.15) 0%, transparent 70%);
   border-radius: 50%;
   animation: pulsar 4s ease-in-out infinite;
 }
@@ -243,9 +243,8 @@ a {
 }
 
 .hero-visual img {
-  max-width: 380px;
+  max-width: 320px;
   width: 100%;
-  border-radius: 0;        /* remove a borda quadrada */
-  background: transparent; /* fundo transparente */
+  mix-blend-mode: multiply; /* remove o fundo branco da imagem */
   animation: fadeUp 0.6s 0.2s ease both;
 }
