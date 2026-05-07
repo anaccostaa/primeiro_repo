@@ -468,3 +468,207 @@ a {
   font-size: 0.85rem !important;
   font-weight: 500;
 }
+
+/* ===== PÁGINA HERO ===== */
+.pagina-hero {
+  padding: 4rem 0 3rem;
+  background: var(--creme);
+}
+
+.pagina-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--marrom);
+  margin: 0.5rem 0 1rem;
+}
+
+.pagina-hero h1 em {
+  color: var(--laranja);
+  font-style: italic;
+}
+
+/* ===== TABELA DE PREÇOS ===== */
+.precos {
+  padding: 4rem 0;
+  background: var(--branco);
+}
+
+.precos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--marrom);
+  margin-bottom: 0.5rem;
+}
+
+.precos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.preco-card {
+  background: var(--creme);
+  border-radius: var(--raio);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.preco-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+.preco-card.destaque {
+  background: var(--marrom);
+  color: var(--branco);
+}
+
+.preco-card.destaque h3 {
+  color: var(--branco);
+}
+
+.preco-card.destaque li {
+  color: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.preco-card.destaque span {
+  color: var(--laranja) !important;
+}
+
+.preco-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--laranja);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.preco-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--marrom);
+  margin: 1rem 0;
+}
+
+.preco-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.preco-card li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(92,61,46,0.08);
+}
+
+.preco-card span {
+  font-weight: 600;
+  color: var(--marrom);
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario-section {
+  padding: 5rem 0;
+  background: var(--creme);
+}
+
+.formulario-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--marrom);
+  margin-bottom: 0.5rem;
+}
+
+.reserva-form {
+  margin-top: 2.5rem;
+  max-width: 760px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--texto);
+}
+
+input, select, textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid rgba(92,61,46,0.2);
+  border-radius: 10px;
+  background: var(--branco);
+  color: var(--texto);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--laranja);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.reserva-form .btn-primary {
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ===== CONFIRMAÇÃO ===== */
+.confirmacao {
+  display: none;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.confirmacao-icone {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.confirmacao h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--marrom);
+  margin-bottom: 0.75rem;
+}
+
+.confirmacao p {
+  color: var(--texto-suave);
+  font-size: 1rem;
+  line-height: 1.7;
+}
