@@ -673,8 +673,7 @@ textarea {
   line-height: 1.7;
 }
 /* ===== RESPONSIVIDADE ===== */
-/* Essas regras só ativam em telas 
-   menores que 768px (celular/tablet) */
+
 
 @media (max-width: 768px) {
 
